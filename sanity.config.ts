@@ -2,6 +2,7 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
+import {documentInternationalization} from '@sanity/document-internationalization'
 
 export default defineConfig({
   name: 'default',
@@ -10,7 +11,17 @@ export default defineConfig({
   projectId: 'exr2ztml',
   dataset: 'dev',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool(),
+    visionTool(),
+    documentInternationalization({
+      supportedLanguages: [
+        {id: 'en', title: 'English'},
+        {id: 'pl', title: 'Polski'},
+      ],
+      schemaTypes: ['caseStudy'],
+    }),
+  ],
 
   schema: {
     types: schemaTypes,
