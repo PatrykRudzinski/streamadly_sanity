@@ -17,7 +17,7 @@ export default defineConfig({
     documentInternationalization({
       supportedLanguages: [
         {id: 'en', title: 'English'},
-        {id: 'pl', title: 'Polski'},
+        {id: 'pl', title: 'Polish'},
       ],
       schemaTypes: ['caseStudy'],
     }),
