@@ -9,7 +9,7 @@ export default defineConfig({
   title: 'streamadly-landing-page',
 
   projectId: 'exr2ztml',
-  dataset: 'dev',
+  dataset: process.env.SANITY_STUDIO_DATASET || 'dev',
 
   plugins: [
     structureTool(),
