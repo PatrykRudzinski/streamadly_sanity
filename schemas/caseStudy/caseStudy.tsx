@@ -72,7 +72,15 @@ export default defineType({
     {
       name: 'coverImage',
       title: 'Cover image',
-      description: 'Image will be visible on cards and on Case Study header',
+      description: 'Image will be visible on Case Study header and wide cards',
+      type: 'image',
+      validation: (rule) => rule.required(),
+      fields: [{name: 'alt', title: 'Alt description', type: 'string'}],
+    },
+    {
+      name: 'thumbnailImage',
+      title: 'Thumbnail image',
+      description: 'Image will be visible on cards',
       type: 'image',
       validation: (rule) => rule.required(),
       fields: [{name: 'alt', title: 'Alt description', type: 'string'}],

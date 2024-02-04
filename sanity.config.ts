@@ -19,7 +19,7 @@ export default defineConfig({
         {id: 'en', title: 'English'},
         {id: 'pl', title: 'Polish'},
       ],
-      schemaTypes: ['caseStudy', 'partner'],
+      schemaTypes: ['caseStudy', 'partner', 'dictionary'],
     }),
   ],
 
