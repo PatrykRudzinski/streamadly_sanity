@@ -465,6 +465,12 @@ export default defineType({
               type: 'string',
               title: 'Section subheader',
               validation: (rule) => rule.required()
+            },
+            {
+              name: 'cardCta',
+              type: 'string',
+              title: 'Partner card CTA',
+              validation: (rule) => rule.required()
             }
           ]
         }
