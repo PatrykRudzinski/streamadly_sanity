@@ -287,11 +287,16 @@ export default defineType({
               type: 'object',
               title: 'Cards content',
               validation: (rule) => rule.required(),
+              options: {
+                collapsible: true,
+                collapsed: false
+              },
               fields: [
                 {
                   name: 'card1',
                   type: 'object',
                   title: 'Card 1',
+                  validation: (rule) => rule.required(),
                   fields: [
                     {
                       name: 'title',
@@ -311,6 +316,8 @@ export default defineType({
                   name: 'card2',
                   type: 'object',
                   title: 'Card 2',
+                  validation: (rule) => rule.required(),
+
                   fields: [
                     {
                       name: 'title',
@@ -330,6 +337,8 @@ export default defineType({
                   name: 'card3',
                   type: 'object',
                   title: 'Card 3',
+                  validation: (rule) => rule.required(),
+
                   fields: [
                     {
                       name: 'title',
@@ -349,6 +358,7 @@ export default defineType({
                   name: 'card4',
                   type: 'object',
                   title: 'Card 4',
+                  validation: (rule) => rule.required(),
                   fields: [
                     {
                       name: 'title',
@@ -392,7 +402,7 @@ export default defineType({
             },
             {
               name: 'description',
-              type: 'string',
+              type: 'text',
               title: 'Description',
               validation: (rule) => rule.required()
             },
