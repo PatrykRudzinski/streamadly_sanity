@@ -553,6 +553,13 @@ export default defineType({
               validation: (rule) => rule.required()
             },
             {
+              name: 'successfullySent',
+              type: 'string',
+              title: 'Message after sending a form',
+              validation: (rule) => rule.required(),
+              initialValue: 'Wiadomość została wysłana!'
+            },
+            {
               name: 'consents',
               type: 'array',
               title: 'Required consents',
